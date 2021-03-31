@@ -47,6 +47,9 @@ Groupe:
 		- si utilisateur non connecté (utilisateur invité),  bouton "se connecter" ramène à l'activité connexion
 		- si utilisateur connecté, bouton "profil", amène à l'activité profil
 		
+	-> la liste des service est une listView qui est remplit automatiquement avec un CursorAcapter
+	
+		
 **page Profil**
 
 	-> page vide,
