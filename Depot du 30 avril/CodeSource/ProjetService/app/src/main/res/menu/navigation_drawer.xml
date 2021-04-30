@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:id="@+id/menu">
+
+    <group
+        android:id="@+id/menucommun"
+        android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/itemprofil"
+            android:title="@string/profil"
+
+            />
+        <!--      android:checked="true"-->
+        <!--  android:icon="@drawable/ic_drafts_black_24dp" -->
+        <item
+            android:id="@+id/itemoption"
+            android:title="@string/option" />
+        <item
+            android:id="@+id/itemrecherche"
+            android:title="@string/recherche" />
+        <item
+            android:id="@+id/itemDeconnexion"
+            android:title="@string/deconnexion" />
+        <item
+            android:id="@+id/itemconnexion"
+            android:title="@string/seConnecter"
+            />
+
+
+    </group>
+
+    <group
+        android:id="@+id/menuclient"
+        android:checkableBehavior="single"
+        android:visible="false"
+        >
+
+
+    </group>
+
+    <group
+        android:id="@+id/menufournisseur"
+        android:checkableBehavior="single"
+        android:visible="false" >
+        <item
+        android:id="@+id/itemMonService"
+        android:title="@string/monservice"
+        />
+        <item
+            android:id="@+id/itemAccueilF"
+            android:title="@string/accueil"
+
+            />
+
+
+    </group>
+</menu>
