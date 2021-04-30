@@ -53,7 +53,9 @@ Groupe:
 	-> les services créés apparaisse dans la zone de recherche
 
 -> Le menu (tiroir de navigation)
+
 	-> Le code est entièrement dans l'activity abstraite MainLayoutMenu.
+	
 	-> Les activités avec un tiroir de navigation héritent de MainLayoutMenu
 	
 
