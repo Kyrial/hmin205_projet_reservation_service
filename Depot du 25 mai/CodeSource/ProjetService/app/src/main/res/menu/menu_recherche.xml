@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.projetservice.Activity.Recherche">
+    <item
+        android:id="@+id/bouton_retour"
+        android:orderInCategory="100"
+        android:title="@string/retour"
+        app:showAsAction="always" />
+
+</menu>

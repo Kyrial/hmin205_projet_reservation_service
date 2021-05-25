@@ -1,0 +1,25 @@
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true">
+    <!--style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"-->
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/DodoService"
+        app:navigationIcon="@drawable/ic_menu_24dp"
+        style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+        android:background="@android:color/transparent"
+        app:menu="@menu/menu_recherche"
+        android:elevation="0dp" />
+
+
+
+
+</com.google.android.material.appbar.AppBarLayout>
