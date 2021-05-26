@@ -88,7 +88,9 @@ public class Repository {
 
             //newUser._id = dao.getDataCountUser() + 1;
             dao.insert(newUser);
-            return newUser;
+            UtilisateurEntity connecte = dao.seConnecter(identifiant,motdepasse);
+
+            return connecte;
         }
     }
 

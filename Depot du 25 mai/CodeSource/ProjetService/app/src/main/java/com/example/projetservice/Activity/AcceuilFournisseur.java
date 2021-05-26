@@ -63,7 +63,7 @@ public class AcceuilFournisseur extends MainLayoutMenu {
         final Observer<Cursor> CursorObserver = new Observer<Cursor>() {
             @Override
             public void onChanged(@Nullable final Cursor cursorRdv) {// Update the UI, in thiscase, a TextView.name
-                if (cursorRdv.moveToFirst() && cursorRdv.getCount() >= 1) {
+                if (cursorRdv.moveToFirst() && cursorRdv.getCount() >= 0) {
                     if (AdapterRdv == null) {
                         AdapterRdv = new CursorAdapteurRDV(context, cursorRdv);
                         ListView lvItems = (ListView) findViewById(R.id.listrdvFournisseur);
@@ -74,6 +74,10 @@ public class AcceuilFournisseur extends MainLayoutMenu {
                       //  Log.v("1_acceuilF", "changement de cursor " + cursorRdv.getString(cursorRdv.getColumnIndexOrThrow("Nom")));
 
                     }
+                }
+                else {
+                    if (AdapterRdv != null)
+                        AdapterRdv.changeCursor(null);
                 }
             }
         };

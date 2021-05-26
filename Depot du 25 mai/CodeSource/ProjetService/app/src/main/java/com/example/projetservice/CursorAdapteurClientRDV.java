@@ -70,13 +70,15 @@ public class CursorAdapteurClientRDV extends CursorAdapter {
 
 
             LinearLayout ll = view.findViewById(R.id.layoutCursorRDV);
-            ll.setTag(cursor.getInt(cursor.getColumnIndex("_id")));
+            ll.setTag(cursor.getInt(cursor.getColumnIndex("servId"))+","
+                    +cursor.getInt(cursor.getColumnIndex("_id")));
 
             ll.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Log.v("row clicked", "the id: "+v.getTag());
 
+                    String[] val =v.getTag().toString().split(",");
 
                     AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 
@@ -86,7 +88,7 @@ public class CursorAdapteurClientRDV extends CursorAdapter {
                             .setMessage("Confirmer la suppression du rendez vous")
                             .setPositiveButton(R.string.oui, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    model.supprimerRdv((Integer)v.getTag());
+                                    model.supprimerRdv(Integer.parseInt(val[1]));
                                 }
                             })
                             .setNegativeButton(R.string.retour, new DialogInterface.OnClickListener() {
@@ -101,7 +103,7 @@ public class CursorAdapteurClientRDV extends CursorAdapter {
                                     Log.v("row clicked", "the id: " + v.getTag());
                                     Intent myIntent = new Intent(context, ServiceViewClient.class);
                                     // myIntent.putExtra(User.);
-                                    myIntent.putExtra("SERVICE_ID", (Integer) v.getTag());
+                                    myIntent.putExtra("SERVICE_ID", Integer.parseInt(val[0]));
                                     context.startActivity(myIntent);
                                 }
                             } );
